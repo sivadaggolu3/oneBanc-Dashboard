@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OneBanc — The Trusted Partner</title>
+    <link rel="icon" type="image/webp" href="images/one_banc.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-mark" viewBox="0 0 24 24" fill="none"><path d="M4 15 Q8 6 12 12 T20 8" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"/><circle cx="20" cy="8" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></symbol>
+  <symbol id="i-pay" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2.3"/><path d="M3 10.5h18"/><path d="M7 15h4"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 11 13"/><path d="M21 3 14.5 21l-3.5-8-8-3.5Z"/></symbol>
+  <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V5.5A1.5 1.5 0 0 1 5.5 4H8"/><path d="M16 4h2.5A1.5 1.5 0 0 1 20 5.5V8"/><path d="M20 16v2.5a1.5 1.5 0 0 1-1.5 1.5H16"/><path d="M8 20H5.5A1.5 1.5 0 0 1 4 18.5V16"/><path d="M4 12h16"/></symbol>
+  <symbol id="i-bill" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l4 4v16H6z"/><path d="M9 9h6M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-chevl" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-chevr" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M9.3 9.7c0-1 1.1-1.9 2.7-1.9s2.7.7 2.7 1.7c0 2.4-5.4 1.1-5.4 3.4 0 1 1.1 1.7 2.7 1.7s2.7-.9 2.7-1.9"/></symbol>
+  <symbol id="i-plane" viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 3 21 12l-10.5 9-1-1 4-6.5-9 1L3 12l2.5-2.5 9 1-4-6.5z"/></symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<nav class="site-nav">
+  <div class="nav-inner">
+<div class="brand-mark"><img id="navLogo" src="images/onebanc_text.webp" alt="OneBanc" class="logo-img"></div>
+    <div class="nav-links">
+      <a class="active" href="#">Dashboard</a>
+      <a href="#">Insights</a>
+      <a href="#">Bills</a>
+      <a href="#">Cards</a>
+    </div>
+    <div class="nav-right">
+      <div class="icon-btn"><svg viewBox="0 0 24 24"><use href="#i-bell"/></svg><div class="dot-badge" id="notifDot"></div></div>
+      <div class="avatar">S</div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="greeting" id="greeting">Good morning, Siva ☀️</div>
+      <div class="greeting-sub" id="greetingSub">Here's your money for today</div>
+    </div>
+    <div class="balance-block">
+      <div class="balance-label">Available balance</div>
+      <div class="balance-figure" id="balanceFigure" data-current="25000">₹25,000</div>
+    </div>
+  </div>
+
+  <div class="personal-moment" id="personalMoment"></div>
+
+  <!-- ============ TIME JOURNEY ============ -->
+  <div class="journey">
+    <button class="journey-play" id="journeyPlay">▶ Play Day Journey</button>
+    <div class="journey-track">
+      <div class="journey-line"><div class="journey-line-fill" id="journeyFill"></div></div>
+      <button class="j-stop active" data-time="plan"><span class="j-time">09:00 AM</span><span class="j-label">PLAN</span></button>
+      <button class="j-stop" data-time="guide"><span class="j-time">02:00 PM</span><span class="j-label">GUIDE</span></button>
+      <button class="j-stop" data-time="review"><span class="j-time">05:00 PM</span><span class="j-label">REVIEW</span></button>
+    </div>
+  </div>
+</header>
+
+<main class="dashboard">
+
+  <!-- ============ QUICK ACTIONS ============ -->
+  <div class="quick-actions">
+    <button class="qa"><span class="qa-ic"><svg viewBox="0 0 24 24"><use href="#i-pay"/></svg></span>Pay</button>
+    <button class="qa"><span class="qa-ic"><svg viewBox="0 0 24 24"><use href="#i-send"/></svg></span>Send</button>
+    <button class="qa"><span class="qa-ic"><svg viewBox="0 0 24 24"><use href="#i-scan"/></svg></span>Scan</button>
+    <button class="qa"><span class="qa-ic"><svg viewBox="0 0 24 24"><use href="#i-bill"/></svg></span>Bills</button>
+  </div>
+
+  <!-- ============ SMART FOR YOU ============ -->
+  <section class="carousel">
+    <div class="carousel-head">
+      <span class="carousel-title">Smart for you</span>
+      <div class="carousel-arrows">
+        <button class="car-arrow" id="carPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><use href="#i-chevl"/></svg></button>
+        <button class="car-arrow" id="carNext" aria-label="Next"><svg viewBox="0 0 24 24"><use href="#i-chevr"/></svg></button>
+      </div>
+    </div>
+    <div class="carousel-viewport">
+      <div class="carousel-track" id="carouselTrack"></div>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </section>
+
+  <!-- ============ SMALL INSIGHT ROW ============ -->
+  <div class="insight-row" id="insightRow"></div>
+
+  <!-- ============ TODAY'S PLAN / CURRENT SPENDING ============ -->
+  <section class="plan-card" id="planCard"></section>
+
+  <!-- ============ TODAY'S ACTIVITY ============ -->
+  <section class="activity-card">
+    <div class="section-title">Today's activity</div>
+    <div class="tx-list" id="txList"></div>
+  </section>
+
+  <!-- ============ EVENING REVIEW SUMMARY ============ -->
+  <section class="review-summary" id="reviewSummary" hidden></section>
+
+</main>
+
+<footer class="site-footer">OneBanc Technologies Pvt. Ltd. — a concept dashboard prototype, for demonstration purposes.</footer>
+
+<!-- ============ TRANSACTION DETAIL DRAWER ============ -->
+<div class="drawer-overlay" id="drawerOverlay">
+  <div class="drawer" id="drawer" role="dialog" aria-modal="true">
+    <button class="drawer-close" id="drawerClose"><svg viewBox="0 0 24 24"><use href="#i-close"/></svg></button>
+    <div id="drawerContent"></div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
