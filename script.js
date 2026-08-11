@@ -90,11 +90,11 @@ function renderHero(){
    ============================================================ */
 function renderPersonalMoment(){
   const el = document.getElementById('personalMoment');
-  const map = {
-    plan:   `🎂 <span>Your birthday is tomorrow — we've planned something within your budget. <b>₹1,500</b> kept aside.</span>`,
-    guide:  `🎂 <span>Planning tonight's birthday dinner with friends? Dinner for 4 · <b>₹1,500</b> · 20% OFF with OneBanc — estimated saving ₹300.</span><span class="pm-link" id="pmLink">View suggestion →</span>`,
-    review: `🌙 <span>Tomorrow's the big day 🎂 — your <b>₹1,500</b> is kept aside and everything's ready for your birthday.</span><span class="pm-link" id="pmLink">View my plan →</span>`,
-  };
+ const map = {
+    plan:   `🎂 <span><b>Happy Birthday, Siva! 🎉</b> We've planned something special within your budget — <b>₹1,500</b> kept aside for today.</span>`,
+    guide:  `🍽️ <span>Celebrating with friends? Enjoy a birthday lunch — <b>20% OFF</b> with your OneBanc Card, save up to ₹300.</span><span class="pm-link" id="pmLink">View offer →</span>`,
+    review: `🎬 <span>End your birthday on a high note — <b>20% OFF</b> movie tickets with OneBanc. Hope it was a great day!</span><span class="pm-link" id="pmLink">View offer →</span>`,
+};
   el.innerHTML = map[state.time];
   const link = document.getElementById('pmLink');
   if(link) link.addEventListener('click', ()=> showToast('Your birthday plan is ready to view.'));
