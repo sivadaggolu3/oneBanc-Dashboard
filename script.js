@@ -82,6 +82,7 @@ function renderHero(){
   animateNumber(balEl, currentBalance());
 
   document.body.classList.toggle('is-evening', state.time === 'review');
+  document.body.classList.toggle('is-afternoon', state.time === 'guide');
 }
 
 /* ============================================================
@@ -358,7 +359,7 @@ function spendingGuideCardHTML(){
 function buildCarouselCards(){
   if(state.time === 'plan')  return [goaCardHTML(), offerCardHTML(), billCardHTML(), rahulCardHTML()];
   if(state.time === 'guide') return [goaCardHTML(), offerCardHTML(), rahulCardHTML(), spendingGuideCardHTML()];
-  return [goaCardHTML(), rahulCardHTML(), billCardHTML(), offerCardHTML()]; // review
+  return [ rahulCardHTML(), offerCardHTML(),billCardHTML(),goaCardHTML(),]; // review
 }
 
 let activeCarouselCleanup = null; // detaches the previous carousel's window listeners before a re-render
